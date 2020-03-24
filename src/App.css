@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	background: #f1f1f1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+	width: 350px;
+	height: 70vh;
+	background: #ffffff;
+	margin: 0 auto;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Add Profile CSS */
+.add-profile {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.add-profile form {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-profile input {
+	margin-bottom: 5px;
+	padding: 4px 0px;
+	border-radius: 24px;
+	border: none;
+	background: #fbfbfb;
+	height: 30px;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #000000;
+	letter-spacing: 1px;
+	outline: none;
+	font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.add-profile input[type="submit"] {
+	margin: 0 auto;
+	background: #464646;
+	width: 86px;
+	margin-top: 5px;
+	font-size: 13px;
+	color: #f1f1f1;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 2px;
+	letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-profile input::placeholder {
+	color: rgb(218, 218, 218);
+}
+
+/* Profile style */
+.profiles {
+	padding: 0px 20px;
+	height: 450px;
+	overflow-y: scroll;
+}
+.profiles::-webkit-scrollbar {
+	width: 0px;
+}
+.profile {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	height: 100px;
+	align-items: center;
+	transition: 0.4s all ease-in-out;
+}
+
+.profile button {
+	position: absolute;
+	right: -90px;
+}
+
+.info {
+	width: 60%;
+}
+
+.avatar {
+	height: 45px;
+	width: 45px;
+	background: #f44336;
+	border-radius: 50px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 45px;
+	color: #ffff;
+}
+
+.avatar img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50px;
+}
+
+.info h3 {
+	font-size: 17px;
+	font-weight: 700;
+	color: gray;
+	margin: 0;
+}
+
+.info p {
+	margin: 0;
+	font-size: 13px;
+	line-height: 24px;
+	color: #a5a5a5;
+	font-weight: 500;
+}
+
+.profile button {
+	border: none;
+	background: #464646;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #f1f1f1;
+	transition: 0.4s all ease-in-out;
+	outline: none;
+	cursor: pointer;
+}
+
+.profile:hover.profile button {
+	right: 0;
 }
